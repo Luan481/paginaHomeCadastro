@@ -23,9 +23,9 @@ async function loadPokemon() {
 
   const results = await Promise.all(promises);
 
-  const validPokemons = results.filter(p => p !== null);
+  const pokemonsValidos = results.filter(p => p !== null);
 
-  setPokemons(validPokemons);
+  setPokemons(pokemonsValidos);
 }
 
   useEffect(() => {
