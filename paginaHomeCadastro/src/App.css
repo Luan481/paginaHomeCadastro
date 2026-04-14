@@ -6,6 +6,7 @@
   padding: 30px 20px;
   color: white;
 }
+
 .logo {
   height: 100px;
   width: 100px;
@@ -14,29 +15,41 @@
   gap: 10px;
   cursor: pointer;
 }
+
 .search {
   flex: 1;
   display: flex;
   justify-content: center;
 }
+
 .search input {
   width: 300px;
   padding: 8px;
   border-radius: 20px;
   border: none;
 }
+
 .menu {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
+.profile img {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
 .cont-main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(90vh - 100px);
+  min-height: calc(90vh - 100px);
   background-color: var(--cor-de-fundo);
+  padding: 20px;
 }
+
 .pokeContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -45,78 +58,93 @@
   width: 100%;
   max-width: 2000px;
 }
+
 .pokeCard {
   background-color: var(--cor-do-card);
   border-radius: 10px;
   padding: 8px;
   text-align: center;
+  transition: transform 0.2s;
 }
+
 .pokeCard:hover {
   transform: scale(1.05);
 }
+
 .pokeCard img {
   width: 110px;
   height: 110px;
 }
+
 .pokeCard p {
   text-transform: capitalize;
   font-weight: bold;
 }
-.profile img{
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-}
 
 
-.login_box{
-  height: 600px;
-  width: 400px;
+.login_box {
+  width: 100%;
+  max-width: 400px;
+  min-height: 500px;
+  padding: 40px 20px; 
   background-color: var(--box-login);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 50px;
+  gap: 15px; 
+  border-radius: 30px; 
   color: white;
   box-shadow: rgba(0, 110, 255, 0.35) 0px 5px 15px;
 }
-.login_box input{
-  width: 75%;
-  height: 6%;
-  border-radius: 25px;
-  padding: 10px;
-  outline: none;
-  border: none;
-  margin: 10px;
-}
-.login_box h1{
-  position: relative;
-  top: -25%;
+
+.login_box h1 {
   text-transform: uppercase;
   color: var(--texto-login);
-  
+  margin-bottom: 10px; 
 }
-.login_box button{
-  height: 40px;
-  width: 120px;
-  position: relative;
-  bottom: -25%;
+
+.login_box input {
+  width: 85%;
+  height: 45px; 
+  border-radius: 25px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.login_box p {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login_box a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login_box a:hover {
+  color: var(--texto-login);
+}
+
+.login_box button {
+  height: 45px;
+  width: 60%;
   border-radius: 25px;
   outline: none;
   border: 0;
-  transition: background-color 0.3s, scale 0.2s;
+  transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
-  font-weight: 1000;
+  font-weight: 800;
   text-transform: uppercase;
+  margin-top: 15px; 
+  font-family: "Poppins", sans-serif;
 }
-.login_box button:hover{
-  scale: 1.2;
+
+.login_box button:hover {
+  transform: scale(1.05); 
   background-color: var(--texto-login);
-}
-.login_box a{
-  color: red;
-}
-.login_box a:hover{
-  color: var(--texto-login);
 }
