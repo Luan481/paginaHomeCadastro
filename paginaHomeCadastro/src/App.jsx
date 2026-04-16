@@ -6,7 +6,7 @@ import Cadastro from "./pages/Cadastro";
 function App() {
   const [page, setPage] = useState(<Home />);
   
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false); //lógica do modo escuro...
 
   useEffect(() => {
     if (isDarkMode) {
@@ -14,10 +14,10 @@ function App() {
     } else {
       document.body.classList.remove("dark-mode");
     }
-  }, [isDarkMode]);
+  }, [isDarkMode]); //Se true, adiciona o darkmode no html
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode(!isDarkMode);  //'Interruptpr'
   };
 
   return (
@@ -48,7 +48,7 @@ function App() {
             }}
             title="Mudar Tema"
           >
-            {isDarkMode ? '☀️' : '🌙'}
+            {isDarkMode ? '🌞' : '🌚'}
           </button>
 
           <button>MEUS TIMES</button>
